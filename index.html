@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science | Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2563eb;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            background: white;
+            color: #2563eb;
+            border: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #e0e7ff;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        /* FORM STYLES */
+        .form-container {
+            display: none;
+            max-width: 400px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #1e40af;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Computer Science</h1>
+    <p>Learn • Code • Innovate</p>
+</header>
+
+<nav>
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Sign Up</button>
+</nav>
+
+<!-- LOGIN FORM -->
+<div class="form-container" id="loginForm">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username" required>
+    <input type="password" id="loginPass" placeholder="Password" required>
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- SIGNUP FORM -->
+<div class="form-container" id="signupForm">
+    <h2>Sign Up</h2>
+    <input type="text" id="signupUser" placeholder="Username" required>
+    <input type="email" id="signupEmail" placeholder="Email" required>
+    <input type="password" id="signupPass" placeholder="Password" required>
+    <button onclick="signup()">Sign Up</button>
+</div>
+
+<div class="container" id="mainContent">
+    <section>
+        <h2>Welcome to Computer Science</h2>
+        <p>
+            Computer Science is the study of computers, algorithms, and software systems.
+            It plays a vital role in modern technology and innovation.
+        </p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Computer Science Website</p>
+</footer>
+
+<script>
+    function showLogin() {
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("signupForm").style.display = "none";
+    }
+
+    function showSignup() {
+        document.getElementById("signupForm").style.display = "block";
+        document.getElementById("loginForm").style.display = "none";
+    }
+
+    function signup() {
+        alert("Signup successful! (Demo only)");
+        document.getElementById("signupForm").style.display = "none";
+    }
+
+    function login() {
+        alert("Login successful! (Demo only)");
+        document.getElementById("loginForm").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
